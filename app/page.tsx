@@ -2,10 +2,12 @@
 
 import dynamic from "next/dynamic"
 
-// Lazy-load SPA to avoid SSR issues with BrowserRouter
-const MediBuddyApp = dynamic(() => import("../src/app").then((m) => m.default), { ssr: false })
+// Disable SSR for the dashboard page
+const AdminDashboard = dynamic(() => import("@/src/pages/admin-dashboard").then(m => m.default), {
+  ssr: false,
+})
 
 export default function Page() {
-  console.log("[v0] Root Page: rendering SPA for '/'")
-  return <MediBuddyApp />
+  console.log("[v0] Admin Dashboard: rendering client-only SPA")
+  return <AdminDashboard />
 }
