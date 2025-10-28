@@ -1,0 +1,57 @@
+{
+  "stats": {
+    "platform": {
+      "users": 48210,
+      "hospitals": 128,
+      "doctors": 2310,
+      "revenue": 1245000
+    },
+    "hospital": {
+      "bloodRequests": 42,
+      "donors": 560,
+      "inventoryAlerts": 8
+    },
+    "doctor": {
+      "pendingConsults": 7,
+      "scheduledCalls": 12
+    },
+    "patient": {
+      "activeReminders": 4,
+      "bookings": 3
+    }
+  },
+  "charts": {
+    "monthlyUsers": [
+      { "month": "Jan", "users": 3200 },
+      { "month": "Feb", "users": 4100 },
+      { "month": "Mar", "users": 5200 },
+      { "month": "Apr", "users": 6100 },
+      { "month": "May", "users": 7300 },
+      { "month": "Jun", "users": 8200 }
+    ],
+    "revenue": [
+      { "month": "Jan", "amount": 120000 },
+      { "month": "Feb", "amount": 130000 },
+      { "month": "Mar", "amount": 145000 },
+      { "month": "Apr", "amount": 160000 },
+      { "month": "May", "amount": 170000 },
+      { "month": "Jun", "amount": 190000 }
+    ]
+  },
+  "notifications": [
+    { "id": "n1", "type": "info", "title": "Welcome to MediBuddy AI", "message": "Explore dashboards across roles." },
+    { "id": "n2", "type": "warning", "title": "Inventory Alert", "message": "Hospital A+ blood bags below threshold." }
+  ],
+  "users": [
+    { "id": "u_1", "name": "Admin User", "role": "admin" },
+    { "id": "u_2", "name": "Hospital Admin", "role": "hospital" },
+    { "id": "u_3", "name": "Dr. Priya", "role": "doctor" },
+    { "id": "u_4", "name": "John Carter", "role": "patient" },
+    { "id": "u_5", "name": "A. Kumar", "role": "donor" }
+  ],
+  "bloodRequests": [
+    { "id": "b1", "type": "A+", "units": 2, "location": "Delhi", "urgency": "High" },
+    { "id": "b2", "type": "O-", "units": 1, "location": "Mumbai", "urgency": "Medium" },
+    { "id": "b3", "type": "B+", "units": 3, "location": "Bengaluru", "urgency": "High" }
+  ]
+}
