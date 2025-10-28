@@ -1,21 +1,25 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
-import { AppProvider } from "./context/app-context"
-import Navbar from "./components/navbar"
-import Sidebar from "./components/sidebar"
+"use client";
+
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { AppProvider } from "./context/app-context";
+import Navbar from "./components/navbar";
+import Sidebar from "./components/sidebar";
 
 // Dashboards
-import AdminDashboard from "./pages/admin-dashboard"
-import HospitalDashboard from "./pages/hospital-dashboard"
-import DoctorDashboard from "./pages/doctor-dashboard"
-import PatientDashboard from "./pages/patient-dashboard"
-import BloodDonorDashboard from "./pages/blood-donor-dashboard"
-import AmbulanceDashboard from "./pages/ambulance-dashboard"
-import MedicineStoreDashboard from "./pages/medicine-store-dashboard"
-import LabDashboard from "./pages/lab-dashboard"
-import NursingDashboard from "./pages/nursing-dashboard"
-import WellnessDashboard from "./pages/wellness-dashboard"
-import Login from "./pages/login"
-import Register from "./pages/register"
+import AdminDashboard from "./pages/admin-dashboard";
+import HospitalDashboard from "./pages/hospital-dashboard";
+import DoctorDashboard from "./pages/doctor-dashboard";
+import PatientDashboard from "./pages/patient-dashboard";
+import BloodDonorDashboard from "./pages/blood-donor-dashboard";
+import AmbulanceDashboard from "./pages/ambulance-dashboard";
+import MedicineStoreDashboard from "./pages/medicine-store-dashboard";
+import LabDashboard from "./pages/lab-dashboard";
+import NursingDashboard from "./pages/nursing-dashboard";
+import WellnessDashboard from "./pages/wellness-dashboard";
+import Login from "./pages/login";
+import Register from "./pages/register";
+
+export const dynamic = "force-dynamic"; // 🛑 Prevent Vercel from prerendering this file
 
 function Shell({ children }) {
   return (
@@ -26,7 +30,7 @@ function Shell({ children }) {
         <main className="flex-1 p-4 md:p-6 lg:p-8">{children}</main>
       </div>
     </div>
-  )
+  );
 }
 
 export default function MediBuddyApp() {
@@ -142,5 +146,5 @@ export default function MediBuddyApp() {
         </Routes>
       </BrowserRouter>
     </AppProvider>
-  )
+  );
 }
